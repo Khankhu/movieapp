@@ -48,8 +48,8 @@ export const NavigationBar = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <nav className="h-14.75 w-full">
-      <div className="flex justify-around py-[11.5px] h-9">
+    <nav className="h-14.75 w-full sticky top-0 z-50 bg-background">
+      <div className="w-full h-full px-6 lg:px-10 flex items-center justify-between">
         <Link href="/">
           <img
             src={theme === "dark" ? "/Darklogo.svg" : "/Lightlogo.svg"}
@@ -88,11 +88,11 @@ export const NavigationBar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <div className="relative h-9">
+          <div className="relative flex items-center w-full max-w-94.75 h-9">
             <Search className="absolute w-4 h-4 top-1/2 -translate-y-1/2 opacity-55 left-3" />
             <Input
               placeholder="Search..."
-              className="w-95 h-9 pl-10 text-sm leading-5"
+              className="w-95 h-9 pl-10 text-sm leading-5 "
             />
           </div>
         </div>
