@@ -88,11 +88,11 @@ export const NavigationBar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <div className="relative">
+          <div className="relative h-9">
             <Search className="absolute w-4 h-4 top-1/2 -translate-y-1/2 opacity-55 left-3" />
             <Input
               placeholder="Search..."
-              className="w-95 h-9 pl-9 text-sm leading-5"
+              className="w-95 h-9 pl-10 text-sm leading-5"
             />
           </div>
         </div>
