@@ -1,16 +1,15 @@
 "use client";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
 import { ChevronDown, ChevronRight, Moon, Search, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Badge } from "./ui/badge";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+} from "./ui/dropdown-menu";
+import { Button, Input } from "@base-ui/react";
 
 const genres = [
   "Action",
@@ -90,9 +89,10 @@ export const NavigationBar = () => {
 
           <div className="relative flex items-center w-full max-w-94.75 h-9">
             <Search className="absolute w-4 h-4 top-1/2 -translate-y-1/2 opacity-55 left-3" />
+
             <Input
               placeholder="Search..."
-              className="w-95 h-9 pl-10 text-sm leading-5 "
+              className="w-95 h-9 rounded-lg border border-input bg-background pl-10 text-sm leading-5"
             />
           </div>
         </div>
@@ -100,9 +100,13 @@ export const NavigationBar = () => {
           onClick={handleTheme}
           size="icon"
           variant="outline"
-          className="w-9 h-9"
+          className="inline-flex size-9 items-center justify-center rounded-xl border border-border bg-background p-0 shadow-none"
         >
-          {theme === "dark" ? <Sun /> : <Moon />}
+          {theme === "dark" ? (
+            <Sun className="size-4 shrink-0" />
+          ) : (
+            <Moon className="size-4 shrink-0" />
+          )}
         </Button>
       </div>
     </nav>

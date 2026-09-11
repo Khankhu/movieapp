@@ -1,2 +1,2 @@
 export * from "./NavigationBar";
-export * from "./Hero";
+export * from "../app/Hero";

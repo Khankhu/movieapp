@@ -1,4 +1,4 @@
-import { Hero } from "./_components";
+import { Hero } from "../_components";
 
 const Home = () => {
   return (
